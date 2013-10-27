@@ -1,10 +1,19 @@
 class UsersController < ApplicationController
+  include ActionController::MimeResponds
+  include ActionController::Helpers
+  include ActionController::Cookies
+  include ActionController::ImplicitRender
+
   # GET /users
   # GET /users.json
   def index
     @users = User.all
 
-    render json: @users
+#    respond_to do |format|
+#      format.json { render }
+#      format.xml { render xml: @users}
+#    end
+
   end
 
   # GET /users/1

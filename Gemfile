@@ -8,6 +8,8 @@ gem 'rails-api'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
+# Use render api template
+gem 'rabl'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
