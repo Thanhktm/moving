@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019143137) do
+ActiveRecord::Schema.define(version: 20131201124818) do
+
+  create_table "cars", force: true do |t|
+    t.string   "name"
+    t.integer  "seats"
+    t.text     "avatar"
+    t.string   "license"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cars", ["latitude"], name: "index_cars_on_latitude", using: :btree
+  add_index "cars", ["longitude"], name: "index_cars_on_longitude", using: :btree
+  add_index "cars", ["seats"], name: "index_cars_on_seats", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "user_name"
@@ -22,6 +37,24 @@ ActiveRecord::Schema.define(version: 20131019143137) do
     t.string   "facebook_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "midle_name"
+    t.string   "last_name"
+    t.text     "avatar"
+    t.string   "country"
+    t.datetime "date_of_birth"
+    t.text     "phone",          limit: 255
+    t.text     "access_token"
+    t.text     "id_gcm"
+    t.text     "device_token"
+    t.text     "socket"
+    t.float    "longitude"
+    t.float    "latitude"
   end
+
+  add_index "users", ["latitude"], name: "index_users_on_latitude", using: :btree
+  add_index "users", ["longitude"], name: "index_users_on_longitude", using: :btree
+  add_index "users", ["password"], name: "index_users_on_password", using: :btree
+  add_index "users", ["user_name"], name: "index_users_on_user_name", using: :btree
 
 end

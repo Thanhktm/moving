@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  seats: 1
+  avatar: MyText
+  license: MyString
+  longitude: 1.5
+  latitude: 1.5
+
+two:
+  name: MyString
+  seats: 1
+  avatar: MyText
+  license: MyString
+  longitude: 1.5
+  latitude: 1.5
